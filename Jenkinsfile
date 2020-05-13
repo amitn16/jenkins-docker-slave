@@ -16,7 +16,7 @@ pipeline {
     stage('deploy') {
       agent any
       steps {
-        sh '''sh \'ssh -o StrictHostKeyChecking=no root@192.168.1.109 /bin/bash\'
+        sh '''ssh -o StrictHostKeyChecking=no root@192.168.1.109 /bin/bash
 '''
       }
     }
