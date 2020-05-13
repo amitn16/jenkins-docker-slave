@@ -9,7 +9,7 @@ pipeline {
 
     stage('pull') {
       steps {
-        git(url: 'https://github.com/bibinwilson/jenkins-docker-slave', branch: 'master', credentialsId: 'amitn16')
+        git(url: 'https://github.com/amitn16/jenkins-docker-slave', branch: 'master', credentialsId: 'amitn16')
       }
     }
 
