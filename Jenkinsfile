@@ -19,7 +19,7 @@ pipeline {
           echo 'docker'
         }
 
-        sh '''ssh root@192.168.1.109
+        sh '''ssh -tt root@192.168.1.109 
 docker run -d -it --name node3 -p 2222:22 bibinwilson/jenkins-slave'''
       }
     }
