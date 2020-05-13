@@ -19,7 +19,8 @@ pipeline {
           echo 'docker'
         }
 
-        sh 'docker run -d -it --name node3 -p 2222:22 bibinwilson/jenkins-slave'
+        sh '''ssh 192.168.1.109
+docker run -d -it --name node3 -p 2222:22 bibinwilson/jenkins-slave'''
       }
     }
 
