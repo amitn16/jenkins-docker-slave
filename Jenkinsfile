@@ -14,13 +14,10 @@ pipeline {
     }
 
     stage('deploy') {
+      agent any
       steps {
-        node(label: 'java-docker-slave') {
-          echo 'docker'
-        }
-
-        sh '''ssh -o StrictHostKeyChecking=no 192.168.1.109 /bin/bash
-docker run -d -it --name node3 -p 2222:22 bibinwilson/jenkins-slave\'\'\''''
+        sh '''sh \'ssh -o StrictHostKeyChecking=no root@192.168.1.109 /bin/bash\'
+'''
       }
     }
 
