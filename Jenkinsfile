@@ -19,8 +19,8 @@ pipeline {
           echo 'docker'
         }
 
-        sh '''ssh -o StrictHostKeyChecking=no root@192.168.1.109 /bin/bash
-docker run -d -it --name node3 -p 2222:22 bibinwilson/jenkins-slave'''
+        sh '''sh label: \'\', script: \'\'\'ssh -o StrictHostKeyChecking=no amit@192.168.1.109 /bin/bash
+docker run -d -it --name node3 -p 2222:22 bibinwilson/jenkins-slave\'\'\''''
       }
     }
 
