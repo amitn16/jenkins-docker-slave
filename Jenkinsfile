@@ -19,6 +19,7 @@ pipeline {
           echo 'docker'
         }
 
+        sh 'docker run -d -it --name node3 -p 2222:22 bibinwilson/jenkins-slave'
       }
     }
 
